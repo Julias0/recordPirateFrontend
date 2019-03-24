@@ -1,0 +1,8 @@
+<p>
+  dashboard works!
+</p>
+<div *ngFor="let event of eventList">
+  <button mat-button (click)="play(event.event)">{{event.createdOn}}</button>  
+</div>
+
+<div class="replayPlayer" #player></div>
