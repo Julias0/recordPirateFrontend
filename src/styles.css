@@ -5,6 +5,6 @@ html, body {
     height: 100%;
 }
 
-.container {
+app-root, app-layout {
     height: 100%;
 }

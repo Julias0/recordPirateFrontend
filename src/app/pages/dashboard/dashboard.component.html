@@ -1,8 +1,9 @@
-<p>
-  dashboard works!
-</p>
-<div *ngFor="let event of eventList">
-  <button mat-button (click)="play(event.event)">{{event.createdOn}}</button>  
-</div>
+<h1>These are the sessions that have been captured till now - </h1>
+
+<mat-list *ngFor="let event of eventList">
+  <mat-list-item>
+    <button mat-raised-button (click)="play(event.event)">{{event.createdOn}}</button>
+  </mat-list-item>
+</mat-list>
 
 <div class="replayPlayer" #player></div>

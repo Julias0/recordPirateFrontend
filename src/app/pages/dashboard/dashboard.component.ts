@@ -26,19 +26,18 @@ export class DashboardComponent implements OnInit {
   }
 
   play(e) {
-    // const replayer = new rrweb.Replayer(JSON.parse(e).events);
-
-    // replayer.play();
 
     let player = new rrwebplayer.default({
       target: this.playerHTMLElement.nativeElement, // customizable root element
       data: {
-        events: JSON.parse(e).events,
+        events: this.transformEvents(e),
         autoPlay: true,
       },
     });
+  }
 
-    console.log(player)
+  transformEvents(e) {
+    return JSON.parse(e).events;
   }
 
   eventList = [];

@@ -19,9 +19,6 @@ export class ReplayComponent implements OnInit {
 
 
   play(e) {
-    // const replayer = new rrweb.Replayer(JSON.parse(e).events);
-
-    // replayer.play();
 
     let player = new rrwebplayer.default({
       target: this.playerHTMLElement.nativeElement, // customizable root element

@@ -1,3 +1,11 @@
 :host /deep/.replayPlayer .replayer-wrapper {
     transform: none !important;
 }
+
+:host /deep/ .replayPlayer .rr-player__frame {
+    height: auto !important;
+}
+/* 
+:host /deep/ .replayPlayer .rr-controller {
+    display: inline-block !important;
+} */
