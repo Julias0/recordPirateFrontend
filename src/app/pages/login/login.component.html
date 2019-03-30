@@ -1,14 +1,18 @@
-<form  [formGroup]="fg" fxLayoutAlign="center center">
-  <mat-card flex="33" fxLayout="column" >
-    <mat-card-title>
+<form class="routing-inner-elem" [formGroup]="fg">
+  <mat-card class="loginbox">
+    <mat-card-title class="loginbox--title">
       Login
     </mat-card-title>
-    <mat-form-field appearance="legacy">
-      <input formControlName="username" matNativeControl placeholder="Username">
-    </mat-form-field>
-    <mat-form-field>
-      <input formControlName="password" matNativeControl placeholder="Password">
-    </mat-form-field>
-    <button mat-button (click)="onLogin($event)">Login</button>
+    <mat-card-content>
+      <mat-form-field class="loginbox--formField" appearance="legacy">
+        <input formControlName="username" matNativeControl placeholder="Username">
+      </mat-form-field>
+      <mat-form-field class="loginbox--formField">
+        <input type="password" formControlName="password" matNativeControl placeholder="Password">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onLogin($event)">Login</button>
+    </mat-card-actions>
   </mat-card>
 </form>

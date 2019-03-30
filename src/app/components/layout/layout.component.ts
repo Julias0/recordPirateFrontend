@@ -19,4 +19,8 @@ export class LayoutComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  isLoggedIn() {
+    return this.authService.isLoggedIn();
+  }
+
 }

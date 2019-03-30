@@ -32,8 +32,14 @@ export class LoginComponent implements OnInit {
     this.authService.login(
       this.fg.controls['username'].value,
       this.fg.controls['password'].value).subscribe(res => {
-        this.snackBar.open("Success!");
+        this.snackBar.open("Success!",null,{
+          duration: 1000
+        });
         this.router.navigate(['/dashboard']);
+      },err => {
+        this.snackBar.open("Wrong Id/Password!!",null,{
+          duration: 1000
+        });
       });
   }
 

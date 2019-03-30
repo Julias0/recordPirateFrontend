@@ -18,15 +18,11 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit() {
-    // this.recordForAnInterval();
     // @ts-ignore
     this.apiService.get('/event').subscribe(res => this.eventList = res.payload);
-    console.log(rrweb);
-    console.log(rrwebplayer);
   }
 
   play(e) {
-
     let player = new rrwebplayer.default({
       target: this.playerHTMLElement.nativeElement, // customizable root element
       data: {
@@ -41,6 +37,4 @@ export class DashboardComponent implements OnInit {
   }
 
   eventList = [];
-
-
 }

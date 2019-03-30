@@ -5,6 +5,6 @@ html, body {
     height: 100%;
 }
 
-app-root, app-layout {
+app-root, app-layout, .routing-inner-elem {
     height: 100%;
 }

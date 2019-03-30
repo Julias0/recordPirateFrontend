@@ -38,7 +38,6 @@ import { RegisterComponent } from './pages/register/register.component';
     MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
-    FlexLayoutModule,
     MatButtonModule,
     HttpClientModule,
     MatSnackBarModule,

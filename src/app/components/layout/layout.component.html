@@ -1,25 +1,25 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav mode="side" opened>
-    <div fxLayout="column"  fxLayoutAlign="space-between">
-    <mat-list>
-      <mat-list-item>
-        <button mat-button routerLink='/'>
-          Home
-        </button>
-      </mat-list-item>
-      <mat-list-item>
-        <button mat-button routerLink='/dashboard'>
-          Dashboard
-        </button>
-      </mat-list-item>
-    </mat-list>
-    <mat-list>
-      <mat-list-item>
-        <button mat-button (click)="logout()">
-          Logout
-        </button>
-      </mat-list-item>
-    </mat-list>
+  <mat-sidenav *ngIf="isLoggedIn()" mode="side" opened>
+    <div>
+      <mat-list>
+        <mat-list-item>
+          <button mat-button routerLink='/'>
+            Home
+          </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button routerLink='/dashboard'>
+            Dashboard
+          </button>
+        </mat-list-item>
+      </mat-list>
+      <mat-list>
+        <mat-list-item>
+          <button mat-button (click)="logout()">
+            Logout
+          </button>
+        </mat-list-item>
+      </mat-list>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>

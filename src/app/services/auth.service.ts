@@ -32,7 +32,8 @@ export class AuthService {
 
   isLoggedIn() {
     let token = localStorage.getItem("id_token");
-    if (!!token) {
+
+    if (token !== 'null') {
       let expirationDate = this.jwtHelper.getTokenExpirationDate(token);
       
       // expired token
@@ -43,6 +44,6 @@ export class AuthService {
       }
     }
 
-    return !!localStorage.getItem("id_token");
+    return !!localStorage.getItem("id_token") && localStorage.getItem("id_token")!=='null';
   }
 }
